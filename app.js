@@ -13,7 +13,7 @@ async function connectWallet() {
             console.log("Wallet connected!");
 
             // Enable the flip button after connecting wallet
-            document.getElementById('flipButton').disabled = false;
+            document.getElementById('flipButton').disabled = false; // Changed disabled attribute to false to enable the button
         } else {
             throw new Error("Solana wallet extension not found.");
         }
@@ -45,12 +45,8 @@ async function flipCoin() {
         coin.classList.add('flip'); // Add flip class to trigger animation
 
         setTimeout(() => {
-            coin.style.setProperty('--opacity', '0');
-        }, 300);
-        setTimeout(() => {
             coin.classList.remove('flip'); // Remove flip class after animation completes
-            coin.style.setProperty('--opacity', '1');
-        }, 1000);
+        }, 1000); // Adjust the duration according to your animation duration
 
         // Transfer tokens based on the coin flip result
         const publicKey = wallet.publicKey.toString(); // Get public key of connected wallet
@@ -62,7 +58,7 @@ async function flipCoin() {
         connection = new solanaWeb3.Connection(solanaWeb3.clusterApiUrl('devnet'));
 
         // Create Keypair from secret key for token transfer
-        const privateKeyArray = [172,233,167,131,120,124,245,74,154,239,146,85,94,152,157,5,57,219,74,99,29,103,175,78,182,252,128,1,136,1,145,50,84,141,27,198,65,39,133,230,138,213,108,207,114,63,133,167,234,68,165,84,104,30,144,167,169,177,105,13,215,240,22,236]; // Replace with your private key as an array of bytes
+        const privateKeyArray = [172,233,167,131,120,124,245,74,154,239,146,85,94,152,157,5,57,219,74,99,29,103,175,78,182,252,128,1,136,1,145,50,84,141,27,198,65,39,133,167,234,68,165,84,104,30,144,167,169,177,105,13,215,240,22,236]; // Replace with your private key as an array of bytes
         const payer = solanaWeb3.Keypair.fromSecretKey(new Uint8Array(privateKeyArray));
 
         // Initialize SPL Token instance

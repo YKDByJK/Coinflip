@@ -3,21 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coin Flip DApp</title>
+    <title>$YKD Flip Dapp</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Coin Flip DApp</h1>
-        <p>Connect your Solana wallet to place a bet:</p>
-        <button id="connectButton">Connect Wallet</button>
-        <p>Bet <span id="betAmount">0.1</span> SOL on a coin flip:</p>
-        <button onclick="flipCoin()" id="flipButton" disabled>Flip Coin</button>
-        <p id="result"></p>
-        <!-- Coin element for flip animation -->
-      <!-- Replace the div with img tag -->
-<img src="coin.png" alt="Coin" class="coin" id="coin">
-
+    <div class="content">
+        <div class="container">
+            <h1>Coin Flip DApp</h1>
+            <p>Connect your Solana wallet to place a bet:</p>
+            <button id="connectButton" onclick="connectWallet()">Connect Wallet</button>
+            <p>Bet <span id="betAmount">0.1</span> SOL on a coin flip:</p>
+            <button onclick="flipCoin()" id="flipButton" disabled>Flip Coin</button>
+            <p id="result"></p>
+            <div class="coin-container">
+                <!-- Coin element for flip animation -->
+                <img src="coin.png" alt="Coin" id="coin" class="coin">
+            </div>
+        </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/@solana/web3.js@1.7.8"></script>

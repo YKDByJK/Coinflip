@@ -50,13 +50,6 @@ button:hover {
 
 /* Coin flip animation styles */
 .coin {
-    /* Make sure to replace 'coin.png' with your actual image path */
-    width: 100px;
-    height: 100px;
-    /* Add any additional styles as needed */
-}
-/* Coin flip animation styles */
-.coin {
     width: 100px;
     height: 100px;
     transition: transform 0.6s ease;
