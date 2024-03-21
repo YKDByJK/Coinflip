@@ -70,3 +70,75 @@ button:hover {
         transform: rotateY(360deg);
     }
 }
+/* Add styles for dark mode toggle */
+.dark-mode-toggle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.dark-mode-toggle input[type="checkbox"] {
+    display: none;
+}
+
+.dark-mode-toggle label {
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    background-color: #ccc;
+    border-radius: 34px;
+    position: relative;
+    cursor: pointer;
+}
+
+.dark-mode-toggle label:after {
+    content: '';
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: #fff;
+    top: 3px;
+    left: 3px;
+    transition: 0.3s;
+}
+
+.dark-mode-toggle input[type="checkbox"]:checked + label {
+    background-color: #03a9f4;
+}
+
+.dark-mode-toggle input[type="checkbox"]:checked + label:after {
+    left: calc(100% - 3px);
+    transform: translateX(-100%);
+}
+/* Dark mode styles */
+.dark-mode body {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.dark-mode .container {
+    background-color: #212121;
+    color: #ffffff;
+}
+
+.dark-mode h1 {
+    color: #03a9f4;
+}
+
+.dark-mode button {
+    background-color: #03a9f4;
+    color: #ffffff;
+}
+
+.dark-mode button:hover {
+    background-color: #0288d1;
+}
+
+.dark-mode .coin-container {
+    border-color: #03a9f4;
+}
+
+.dark-mode #result {
+    color: #03a9f4;
+}

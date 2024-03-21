@@ -86,4 +86,31 @@ async function flipCoin() {
     } catch (error) {
         console.error('Error flipping coin and transferring tokens:', error);
     }
+
+    }
+// Function to toggle dark mode
+function toggleDarkMode() {
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    const body = document.body;
+
+    if (darkModeToggle.checked) {
+        body.classList.add('dark-mode');
+        localStorage.setItem('darkModeEnabled', 'true'); // Store dark mode state in localStorage
+    } else {
+        body.classList.remove('dark-mode');
+        localStorage.setItem('darkModeEnabled', 'false'); // Store dark mode state in localStorage
+    }
 }
+
+// Function to initialize dark mode state
+function initializeDarkMode() {
+    const darkModeEnabled = localStorage.getItem('darkModeEnabled');
+
+    if (darkModeEnabled === 'true') {
+        document.getElementById('darkModeToggle').checked = true;
+        toggleDarkMode(); // Apply dark mode if it was enabled previously
+    }
+}
+
+// Call initializeDarkMode() on page load
+window.onload = initializeDarkMode;

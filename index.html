@@ -9,6 +9,11 @@
 <body>
     <div class="content">
         <div class="container">
+            <div class="dark-mode-toggle">
+                <input type="checkbox" id="darkModeToggle" onchange="toggleDarkMode()">
+                <label for="darkModeToggle"></label>
+            </div>
+            
             <h1>Coin Flip DApp</h1>
             <p>Connect your Solana wallet to place a bet:</p>
             <button id="connectButton" onclick="connectWallet()">Connect Wallet</button>
@@ -24,6 +29,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/@solana/web3.js@1.7.8"></script>
     <script src="https://cdn.jsdelivr.net/npm/@solana/spl-token@0.10.1"></script>
-    <script src="script.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
