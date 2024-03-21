@@ -25,12 +25,6 @@ async function connectWallet() {
 // Function to flip the coin and transfer tokens
 async function flipCoin() {
     try {
-        // Check if wallet is connected
-        if (!wallet) {
-            alert('You need to connect your wallet before you flip.');
-            return;
-        }
-
         const betAmount = 0.1; // Bet amount in SOL
         const headsAmount = 1000000; // 1M
         const tailsAmount = 100000;  // 100K
