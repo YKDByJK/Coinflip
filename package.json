@@ -1,10 +1,10 @@
 {
   "name": "solana-coinflip",
   "version": "1.0.0",
-  "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
@@ -13,13 +13,16 @@
     "@project-serum/anchor": "^0.26.0",
     "@solana/spl-token": "^0.4.1",
     "@solana/web3.js": "^1.91.1",
+    "body-parser": "^1.20.2",
     "bs58": "^5.0.0",
-    "cross-fetch": "^4.0.0"
+    "cross-fetch": "^4.0.0",
+    "express": "^4.19.1"
   },
   "devDependencies": {
     "@solana/wallet-adapter-base": "^0.9.23",
     "@solana/wallet-adapter-react": "^0.15.35",
     "@solana/wallet-adapter-react-ui": "^0.9.35",
     "@solana/wallet-adapter-wallets": "^0.19.32"
-  }
+  },
+  "description": ""
 }
